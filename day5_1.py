@@ -1,33 +1,52 @@
-
 import re
 
-f = open("input_day5.txt", "r")
+def read_input_data():
+	f = open("input_day5.txt", "r")
+	data = []
+	for line in f:
+		line = re.split(',| -> | |\n', line)
+		line = filter(None, line)
+		new_line = [int(i) for i in line]
+		data.append(new_line)
+	return data
 
-data = []
-for line in f:
-	line = re.split(',| -> | |\n', line)
-	line = filter(None, line)
-	# print(line)
-	data.append(line)
+def find_max(data):
+	max_x = 0
+	max_y = 0
+	for line in data:
+		if line[0] > max_x:
+			max_x = line[0]
+		if line[2] > max_x:
+			max_x = line[2]
+		if line[1] > max_y:
+			max_y = line[1]
+		if line[3] > max_y:
+			max_y = line[3]
+	return (max_x, max_y)
 
-max_x = 0
-max_y = 0
-for line in data:
-	if int(line[0]) > max_x:
-		max_x = int(line[0])
-	if int(line[2]) > max_x:
-		max_x = int(line[2])
-	if int(line[1]) > max_y:
-		max_y = int(line[1])
-	if int(line[3]) > max_y:
-		max_y = int(line[3])
+def create_map(max_x, max_y):
+	map = [[0] * max_x] * max_y
+	return map
+
+def fill_in_map(map, data, max_x, max_y):
+	for line in data:
+		xlen = line[0] - line[2]
+		ylen = line[1] - line[3]
+		if xlen is 0:
+			map[][line[0]]
+		else:
 
 
+def main():
+	data = read_input_data()
+	max_x, max_y = find_max(data)
+	map = create_map(max_x, max_y)
+	fill_in_map(map, data, max_x, max_y)
+	# count = count_multiple_overlaps(map)
+	# print(count)
 
-
-
-
-
+if __name__ == "__main__":
+	main()
 
 
 
