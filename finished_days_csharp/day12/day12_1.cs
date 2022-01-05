@@ -11,7 +11,7 @@ namespace Day12
 		{
 			Paths.Paths paths = new Paths.Paths();
 
-			paths.PathsReader("input_day12.test");
+			paths.PathsReader("input_day12.txt");
 
 			paths.FindAllPaths();
 

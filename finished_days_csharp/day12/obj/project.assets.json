@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/alexanderkant/Documents/codam/advent_of_code_2021_py/finished_days_csharp/day12/advent_of_code_2021_py.csproj",
+      "projectUniqueName": "/Users/alexanderkant/Documents/codam/advent_of_code_2021/finished_days_csharp/day12/advent_of_code_2021_py.csproj",
       "projectName": "advent_of_code_2021_py",
-      "projectPath": "/Users/alexanderkant/Documents/codam/advent_of_code_2021_py/finished_days_csharp/day12/advent_of_code_2021_py.csproj",
+      "projectPath": "/Users/alexanderkant/Documents/codam/advent_of_code_2021/finished_days_csharp/day12/advent_of_code_2021_py.csproj",
       "packagesPath": "/Users/alexanderkant/.nuget/packages/",
-      "outputPath": "/Users/alexanderkant/Documents/codam/advent_of_code_2021_py/finished_days_csharp/day12/obj/",
+      "outputPath": "/Users/alexanderkant/Documents/codam/advent_of_code_2021/finished_days_csharp/day12/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/alexanderkant/.nuget/NuGet/NuGet.Config"

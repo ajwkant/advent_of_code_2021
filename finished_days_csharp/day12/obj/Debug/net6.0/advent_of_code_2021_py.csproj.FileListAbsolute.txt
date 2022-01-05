@@ -11,3 +11,16 @@
 /Users/alexanderkant/Documents/codam/advent_of_code_2021_py/finished_days_csharp/day12/obj/Debug/net6.0/ref/advent_of_code_2021_py.dll
 /Users/alexanderkant/Documents/codam/advent_of_code_2021_py/finished_days_csharp/day12/obj/Debug/net6.0/advent_of_code_2021_py.pdb
 /Users/alexanderkant/Documents/codam/advent_of_code_2021_py/finished_days_csharp/day12/obj/Debug/net6.0/advent_of_code_2021_py.genruntimeconfig.cache
+/Users/alexanderkant/Documents/codam/advent_of_code_2021/finished_days_csharp/day12/bin/Debug/net6.0/advent_of_code_2021_py
+/Users/alexanderkant/Documents/codam/advent_of_code_2021/finished_days_csharp/day12/bin/Debug/net6.0/advent_of_code_2021_py.deps.json
+/Users/alexanderkant/Documents/codam/advent_of_code_2021/finished_days_csharp/day12/bin/Debug/net6.0/advent_of_code_2021_py.runtimeconfig.json
+/Users/alexanderkant/Documents/codam/advent_of_code_2021/finished_days_csharp/day12/bin/Debug/net6.0/advent_of_code_2021_py.dll
+/Users/alexanderkant/Documents/codam/advent_of_code_2021/finished_days_csharp/day12/bin/Debug/net6.0/ref/advent_of_code_2021_py.dll
+/Users/alexanderkant/Documents/codam/advent_of_code_2021/finished_days_csharp/day12/bin/Debug/net6.0/advent_of_code_2021_py.pdb
+/Users/alexanderkant/Documents/codam/advent_of_code_2021/finished_days_csharp/day12/obj/Debug/net6.0/advent_of_code_2021_py.csproj.AssemblyReference.cache
+/Users/alexanderkant/Documents/codam/advent_of_code_2021/finished_days_csharp/day12/obj/Debug/net6.0/advent_of_code_2021_py.GeneratedMSBuildEditorConfig.editorconfig
+/Users/alexanderkant/Documents/codam/advent_of_code_2021/finished_days_csharp/day12/obj/Debug/net6.0/advent_of_code_2021_py.csproj.CoreCompileInputs.cache
+/Users/alexanderkant/Documents/codam/advent_of_code_2021/finished_days_csharp/day12/obj/Debug/net6.0/advent_of_code_2021_py.dll
+/Users/alexanderkant/Documents/codam/advent_of_code_2021/finished_days_csharp/day12/obj/Debug/net6.0/ref/advent_of_code_2021_py.dll
+/Users/alexanderkant/Documents/codam/advent_of_code_2021/finished_days_csharp/day12/obj/Debug/net6.0/advent_of_code_2021_py.pdb
+/Users/alexanderkant/Documents/codam/advent_of_code_2021/finished_days_csharp/day12/obj/Debug/net6.0/advent_of_code_2021_py.genruntimeconfig.cache

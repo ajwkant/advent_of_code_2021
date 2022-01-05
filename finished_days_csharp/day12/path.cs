@@ -4,6 +4,7 @@ using System.Text;
 using System.IO;
 using System.Linq;
 
+// Recursive program to find all the possible paths through caves of different sizes.
 namespace Day12.Paths
 {
 	public class Paths
@@ -40,7 +41,6 @@ namespace Day12.Paths
 
 			foreach(var path in availablePaths)
 			{
-				// Console.WriteLine(path[0]);
 				if (path[0] == currentCave)
 				{
 					returnList.Add(path[1]);
@@ -50,9 +50,6 @@ namespace Day12.Paths
 					returnList.Add(path[0]);
 				}
 			}
-			Console.WriteLine("returnList in Findnextpaths:");
-			foreach(var line in returnList)
-				Console.WriteLine(line);
 			return (returnList);
 		}
 
@@ -73,7 +70,6 @@ namespace Day12.Paths
 					changedPaths.Add(path);
 				}
 			}
-
 			return (changedPaths);
 		}
 
@@ -84,13 +80,9 @@ namespace Day12.Paths
 			{
 				availablePaths = RemovePathWithCave(availablePaths, previousCave);
 			}
-			else if (previousCave.Length == 1)
+			else if (!previousCave.Any(char.IsUpper))
 			{
-				char cave = char.Parse(previousCave);
-				if (Char.IsLower(cave))
-				{
-					availablePaths = RemovePathWithCave(availablePaths, previousCave);
-				}
+				availablePaths = RemovePathWithCave(availablePaths, previousCave);
 			}
 			return (availablePaths);
 		}
@@ -99,65 +91,27 @@ namespace Day12.Paths
 		{
 			// Add previouscave to current path
 			currentPath.Add(previousCave);
-
-			// Call Recursive path finder
-			// Console.WriteLine("Just visited cave: {0}", previousCave);
-			// Console.WriteLine("available paths left:");
-			// foreach(var line in availablePaths)
-			// {
-			// 	Console.WriteLine();
-			// 	Console.WriteLine(line[0]);
-			// 	Console.WriteLine(line[1]);
-			// }
-			// Console.WriteLine("Currentcave: {0}", currentCave);
 			RecursivePathFinder(currentCave, currentPath, availablePaths);
 		}
 
 		public void RecursivePathFinder(string currentCave, List<string> currentPath, List<List<string>> availablePaths)
 		{
-			// Console.WriteLine("Rec	Just visited cave: {0}", currentCave);
-			// Console.WriteLine("Rec	Available paths left:");
-			// foreach(var line in availablePaths)
-			// {
-			// 	Console.WriteLine();
-			// 	Console.WriteLine(line[0]);
-			// 	Console.WriteLine(line[1]);
-			// }
-
 			if (currentCave == "end")
 			{
-				Console.WriteLine("Found a path that works: ");
-				foreach(var line in currentPath)
-					Console.WriteLine(line);
+				currentPath.Add(currentCave);
 				uniquePaths.Add(currentPath);
 			}
 			else
 			{
-
-
-
-
-				Console.WriteLine("Rec	Just visited cave: {0}", currentCave);
 				List<string> nextPossibleCaves = FindNextPaths(availablePaths, currentCave);
 				availablePaths = RemovePreviousCave(currentCave, availablePaths);
-				Console.WriteLine("Rec	Available paths left:");
-				foreach(var line in availablePaths)
-				{
-					Console.WriteLine();
-					Console.WriteLine(line[0]);
-					Console.WriteLine(line[1]);
-				}
-
-				Console.WriteLine("Rec	nextPossibleCaves:");
-				foreach(var line in nextPossibleCaves)
-				{
-					Console.WriteLine();
-					Console.WriteLine(line);
-					// Console.WriteLine(line[1]);
-				}
 				foreach(var nextPossibleCave in nextPossibleCaves)
 				{
-					List<string> currentPathCopy = currentPath;
+					List<string> currentPathCopy = new List<string>();
+					foreach (string item in currentPath)
+					{
+						currentPathCopy.Add(item);
+					}
 					ContinueDownThisPath(currentCave, currentPathCopy, availablePaths, nextPossibleCave);
 				}
 			}
@@ -171,15 +125,15 @@ namespace Day12.Paths
 
 		public void PrintFoundPaths()
 		{
+			int pathNumber = 1;
 			foreach (var path in uniquePaths)
 			{
-				Console.WriteLine("Path found: \n");
+				Console.WriteLine("\nPath {0} found:", pathNumber);
+				pathNumber++;
 				foreach (string cave in path)
 				{
-					Console.Write(cave);
-					// break;
+					Console.Write(cave + " ");
 				}
-				break;
 			}
 		}
 	}
