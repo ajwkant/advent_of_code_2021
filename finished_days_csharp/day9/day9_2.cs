@@ -93,7 +93,7 @@ namespace Basin
 	}
 	public class Basin_program
 	{
-		static void Main()
+		static void Main1()
 		{
 			String_list stringList = new String_list();
 
